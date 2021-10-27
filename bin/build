@@ -7,6 +7,6 @@ PATH=${PATH}:${DIR}
 test -d "${DIR}/../artifact" && rm -rf "${DIR}/../artifact"
 
 # build project and put output into artifact directory
-npm ci --prefix "${DIR}/../src"
+test -d "${DIR}/../src/node_modules" || npm ci --prefix "${DIR}/../src"
 npm run export --prefix "${DIR}/../src"
 mv "${DIR}/../src/out" "${DIR}/../artifact"
