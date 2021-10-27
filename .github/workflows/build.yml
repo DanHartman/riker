@@ -1,0 +1,11 @@
+name: inception
+on: [ push ]
+jobs:
+  inception:
+    runs-on: ubuntu-18.04
+    name: build
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: build
+      run: bin/build
