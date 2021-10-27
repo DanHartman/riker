@@ -1,0 +1,5 @@
+.terraform
+artifact/
+node_modules/
+src/.next/
+src/out/

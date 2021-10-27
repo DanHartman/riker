@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${0}" )" >/dev/null 2>&1 && pwd )"
+PATH=${PATH}:${DIR}
+
+# install dependencies if not present
+test -d "${DIR}/../src/node_modules" || npm install --prefix "${DIR}/../src"
+
+# start local server
+npm run dev --prefix "${DIR}/../src"
