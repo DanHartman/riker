@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-18.04
     name: build
     steps:
+    - uses: actions/setup-node@v1
+      with:
+        version: 12
     - name: checkout
       uses: actions/checkout@v1
     - name: build
