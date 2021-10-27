@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${0}" )" >/dev/null 2>&1 && pwd )"
+PATH=${PATH}:${DIR}
+IMAGE="$(basename $(dirname ${DIR}))"
+TAG="${TAG:-latest}"
+
+# build the image
+docker build --tag ${IMAGE}:${TAG} ${DIR}/..
