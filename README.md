@@ -1,13 +1,14 @@
 # riker
 
 ## Dependencies
-* `make`
-* `bash`
-* `node`
+* `Docker`
+
+## Create the local environment
+* `make localenv`
 
 ## Local Development
-* `make dev`
+* `bin/rikerops make dev`
 * [http://localhost:3000](http://localhost:3000)
 
 ## Build artifact
-`make build`
+`bin/rikerops make build`
